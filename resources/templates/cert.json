@@ -1,0 +1,25 @@
+{
+  "Hosts": [
+    {{- range $i, $el := .Certificate.Hosts}}
+    {{- if $i}},{{- end}}
+    "{{.}}"
+    {{- end}}
+  ],
+
+  "CN": "{{.Certificate.CN}}",
+  "key": {
+    "algo": "rsa",
+    "size": 2048
+  },
+
+  "names": [
+    {
+      "C": "UK",
+      "O": "My Orga PLC",s
+      "OU": "Platform Engineering",
+      "ST": "West Midland",
+      "L": "Birmingham"
+    }
+  ],
+
+}
