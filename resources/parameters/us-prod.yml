@@ -1,0 +1,10 @@
+name: "vault"
+environment: "prod"
+region: "us"
+hostname-prefix: "vault-prod"
+hostname-suffix: "apps.appcanvas.net"
+certificate:
+  cn: "vault-cn"
+  hosts:
+    - "vault"
+    - "vault-prod"
